@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="css/lancamento.css" />
+  </head>
+
+  <body>
+    <div class="formulario_completo">
+      <h1>Formulário de Contato</h1>
+      <form
+        action="https://formsubmit.co/gustavo.klaus@viasoft.com.br"
+        method="POST"
+        class="form"
+      >
+      <p>Seus Dados</p>
+        <label for="name">Nome</label>
+        <input type="text" name="name" id="name" required />
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" required />
+      <p>Dados da Tarefa</p>
+      <label for="Titulo">Titulo</label>
+      <input type="text" name="Titulo" id="Titulo" required />
+        <label for="Descrição">Descrição</label>
+        <textarea name="Descrição" id="Descrição" required></textarea>
+        <p>Selecione o(s) Modulo(s):</p>
+        <div class="modulos">
+          <input type = "checkbox" id ="Café" name = "Café" value ="Sim">
+          <label for ="Café"> Café </label>
+          <input type = "checkbox" id ="Cereais" name = "Cereais" value ="Sim">
+          <label for ="Cereais"> Cereais </label>
+          <input type = "checkbox" id ="Expedição" name = "Expedição" value ="Sim">
+          <label for ="Expedição"> Expedição </label>
+          <input type = "checkbox" id ="Financeiro" name = "Financeiro" value ="Sim">
+          <label for ="Financeiro"> Financeiro </label>
+          <input type = "checkbox" id ="Fiscal" name = "Fiscal" value ="Sim">
+          <label for ="Fiscal"> Fiscal </label>
+          <input type = "checkbox" id ="Industria" name = "Industria" value ="Sim">
+          <label for ="Industria"> Industria </label>
+          <input type = "checkbox" id ="Insumos" name = "Insumos" value ="Sim">
+          <label for ="Insumos"> Insumos </label>
+          <input type = "checkbox" id ="Lavoura" name = "Lavoura" value ="Sim">
+          <label for ="Lavoura"> Lavoura </label>
+          <input type = "checkbox" id ="Leite" name = "Leite" value ="Sim">
+          <label for ="Leite"> Leite </label>
+          <input type = "checkbox" id ="Mobile" name = "Mobile" value ="Sim">
+          <label for ="Mobile"> Mobile </label>
+          <input type = "checkbox" id ="REAG" name = "REAG" value ="Sim">
+          <label for ="REAG"> REAG </label>
+          <input type = "checkbox" id ="Sementes" name = "Sementes" value ="Sim">
+          <label for ="Sementes"> Sementes </label>
+        </div>
+        <div class="status">
+          <p>Selecione o Status:</p>
+          <input type = "checkbox" id ="Status" name = "Status" value ="Lançada">
+          <label for ="Lançada"> Lançada </label>
+          <input type = "checkbox" id ="Status" name = "Status" value ="Em Breve">
+          <label for ="Status"> Em Breve </label>
+          <input type = "checkbox" id ="Status" name = "Status" value ="Futura">
+          <label for ="Status"> Futura </label>
+        </div>
+        <div class="prazo">
+          <p>Selecione o Prazo:</p>
+          <input type = "checkbox" id ="Prazo" name = "Prazo" value ="1° Semestre">
+          <label for ="Lançada"> 1° Semestre 2022</label>
+          <input type = "checkbox" id ="Prazo" name = "Prazo" value ="2° Semestre">
+          <label for ="Status"> 2° Semestre 2022</label>
+          <input type = "checkbox" id ="Prazo" name = "Prazo" value ="2023">
+          <label for ="Status"> 2023 </label>
+          <input type = "checkbox" id ="Prazo" name = "Prazo" value ="2024">
+          <label for ="Status"> 2024 </label>
+        </div>
+        <label for="Link">Link</label>
+        <input type="text" name="Link" id="Link" placeholder="Caso está melhoria possua link, cole-o aqui"/>
+
+        <input type="hidden" name="_captcha" value="false" />
+        <input
+          type="hidden"
+          name="_next"
+          value="https://nela.com.br/"
+        />
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </body>
+</html>

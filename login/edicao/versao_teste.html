@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    #demo{
+      position :absolute;
+      top: -1000px;
+      left: -1000px;
+    }
+
+    @font-face {
+        font-family: 'Source Sans Pro Black';
+        src: url(/geral/source-sans-pro/SourceSansPro-Black.ttf) format('truetype');
+    }
+
+    #titulo-insert {
+        display: none;
+    }
+
+    #prazo-ctn {
+       display: none;
+    }
+
+    #status-ctn {
+        display: none;
+    }
+
+    #modulo-ctn {
+       display: none;
+    }
+
+    .banner, #filtro, .coluna-mestre, .container, #teste {
+        display: none;
+    }
+
+    #conferir {
+        display: none;
+    }
+
+    #opcoes {
+        display: none;
+    }
+
+</style>
+
+<body>
+    
+    <section>
+        <div class="site-externo">
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="<$BlogLanguageDirection$>">
+
+        <head>
+        <title>ROADMAP | AGROTITAN</title>
+                
+                <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+            <!-- Bootstrap Font Icon CSS -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+            <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+            <!--Font Google-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">      
+
+        <style>
+
+            @font-face {
+                font-family: 'Source Sans';
+                src: url(../source-sans-pro/SourceSansPro-Regular.ttf) format('truetype');
+            }
+
+            @font-face {
+                font-family: 'Source Sans Pro Black';
+                src: url(../source-sans-pro/SourceSansPro-Black.ttf) format('truetype');
+            }
+
+            @font-face {
+                font-family: 'Source Sans Pro Bold';
+                src: url(../source-sans-pro/SourceSansPro-Bold.ttf) format('truetype');
+            }
+
+
+            body {
+                font-family: 'Fira Sans', sans-serif;
+                padding-bottom: 5%;
+            }
+
+            /*Estilização dos Filtros*/
+
+                .titulos-filtros {
+                    width: 85%;
+                    margin-left: 7.5%;
+                    margin-right: 7.5%;
+                    margin-top: 2%;
+                    padding: 1.5%;
+                    padding-bottom: 0;
+                }
+                .titulo-prazo {
+                    margin-left: 11.5%;
+                }
+                .titulo-status {
+                    margin-left: 0.5%;
+                }
+                .titulo-modulo {
+                    margin-left: 15.5%;
+                }
+
+                .titulos-filtros p {
+                    display: inline;
+                    font-size: 20px;
+                }
+
+                .opcoes-filtros {
+                    width: 85%;
+                    margin-left: 7.5%;
+                    margin-right: 7.5%;
+                    padding: 1.5%;
+                    padding-top: 0;
+                }
+
+                #status, #prazo, #modulo {
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    margin: 10px 14px 0px 0px;
+                    padding: 10px 20px;
+                    color: black;
+                    background: #F4F5F7;
+                    border: none;
+                    border-radius: 3%;
+                }
+
+                .opcoes-filtros option {
+                    font-size: 18px;
+                    color: #091E42;
+                    padding: 10%;
+                    background-color: #FFFFFF;
+                }
+
+                .btn-redefinir {
+                    background-color: #FFAB00;
+                    padding: 10px 20px;
+                    color: #253858;
+                    font-size: 1.1rem;
+                    border-radius: 4px;
+                    border: none;
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+            /*Fim - Estilização dos Filtros*/
+
+            /*Estilização dos Itens*/
+
+                h4 {
+                    font-weight: bold;
+                }
+                .table-titulos {
+                    border-bottom: 0.5px solid #8d8d8d21;
+                    padding-bottom: 1%;
+                    margin-top: 2%;
+                }
+                .table-descricao {
+                    width: 40%;
+                }
+
+                .table-status {
+                    width: 10%;
+                }
+                .table-prazo {
+                    width: 20%;
+                    font-size: 13px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+                .table-produtos {
+                    width: 20%;
+                }
+                .tabela-produtos-1 {
+                    margin-top: 1%;
+                }
+
+                .finalizada {
+                    background-color: #E3FCEF;
+                    color: #006644;
+                    padding: 5%;
+                    font-size: 0.75rem;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    border-radius: 15%;
+                    display: inline;
+                }
+                .futura {
+                    background-color: #EAE6FF;
+                    color: #403294;          
+                    margin-left: 10.5%;
+                    padding: 5%;
+                    font-size: 0.75rem;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    border-radius: 15%;
+                    display: inline;
+                    text-align: center;
+                }
+                .breve {
+                    background-color: #FFF0B3;
+                    color: #172B4D;
+                    margin-left: 1%;
+                    padding: 5%;
+                    font-size: 0.75rem;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    border-radius: 15%;
+                    display: inline;
+                    text-align: center;
+                }
+                .table-produtos i {
+                    color: rgb(9, 206, 147);
+                }
+
+                .row {
+                    border: 0.5px solid #8d8d8d21;
+                    width: 100%;
+                    margin-top: 2%;
+                    padding: 1.5%;
+                    box-shadow: 3px 3px 2px #8d8d8d21;
+                }
+
+                .row-2 {
+                    border: none;
+                    box-shadow: none;
+                    padding-bottom: 0;
+                }
+
+                .alinhar-imagem {
+                    display: inline; 
+                    width: 10%;
+                    align-items: flex-end;
+                }
+
+                .alinhar-modulo {
+                    display: inline;
+                }
+
+                .table-descricao a {
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: #0065FF;
+                    transition: 0.5s;
+                }
+
+                .table-descricao i {
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: #0065FF;
+                }
+
+                .table-descricao a:hover {
+                    margin-right: 2%;
+                }
+
+                .table-descricao2 i {
+                    color: black;
+                }
+
+                .table-produtos2 i {
+                    color: black;
+                }
+     
+                .icon img {
+                    width: 14px;
+                }
+
+                .Financeiro img {
+                    width: 11px;
+                    height: 14px;
+                }
+
+                .Mobile img {
+                    width: 11px;
+                    height: 16px;
+                }
+
+                .Leite img {
+                    width: 9px;
+                }
+
+                .icon {
+                    font-size: 15px;
+                    color: black;
+                    text-transform: uppercase;
+                    font-family: 'Source Sans Pro Black';
+                }
+
+            /*Fim - Estilização dos Itens*/
+
+            /*Estilização - Banner*/
+
+                .banner {
+                    width: 100%;
+                    box-shadow: 0 10px 5px rgba(0,0,0,.1);
+                    background: url(../img/2022-08-18-AGROTITAN-ROADMAP-BANNER.jpg);
+                    background-size: cover;
+                    height: 40rem;
+                }
+
+                .texto {
+                    width: 40%;
+                    margin-left: 50%;
+                    background-color: rgba(12, 14, 30, 0.932);
+                    padding: 2%;
+                    border-radius: 5%;
+                    position: relative;
+                    top: 5%;
+                    text-align: center;
+                }
+
+                .update {
+                    margin-bottom: 2%;
+                }
+
+                .data {
+                    color: white;
+                    display: inline;
+                    margin-left: 2%;
+                    font-family: 'Source Sans Pro Black';
+                    font-size: 1.3rem;
+                    text-transform: uppercase;
+                }
+
+                .ultima_atualizacao {  
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    padding: 3px 7px;
+                    border-radius: 5%;
+                    display: inline;
+                    font-family: 'Source Sans';
+                    background-color: #03aa72;
+                    color: white;
+                    text-transform: uppercase;
+                }
+
+                .roadmap_titulo {
+                    color: white;
+                    font-family: 'Source Sans';
+                    margin-top: 5%;
+                    font-size: 3rem;
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+
+                .roadmap_titulo b {
+                    font-family: 'Source Sans Pro Black';
+                    text-transform: uppercase;
+                }
+
+                .boas_vindas {
+                    color: white;
+                    text-align: center;
+                    margin-bottom: 5%;
+                    font-size: 2rem;
+                    text-align: center;
+                    margin-left: 10%;
+                    width: 80%;
+                }
+
+                .boas_vindas b {
+                    font-family: 'Source Sans Pro Bold';
+                    font-size: 2rem;
+                }
+
+                .banner h3 {
+                    background-color: #ff070788;
+                    font-size: 1rem;
+                    border-radius: 5px;
+                    padding: 1.5%;
+                    text-align: center;
+                    color: white;
+                    font-weight: bold;
+                }
+
+            /*Fim - Estilização Banner*/
+
+        </style>
+
+        <body>
+
+            <div class="banner">
+                
+                <div class="texto">
+                    <div class="baixar">
+                        <div class="update">
+                            <p class="ultima_atualizacao">última Atualização</p>
+                            <p class="data" id="data">6 de agosto de 2022</p>
+                        </div>
+            
+                        <p class="roadmap_titulo">Roadmap <b>Agrotitan</b></p>
+                        <p class="boas_vindas"><b>Seja bem vindo!</b>
+                            <br>
+                            Confira as novas atualizações do nosso sistema, acompanhe o 
+                            desenvolvimento e fique por dentro de nossas novidades.
+                        </p>
+            
+                        <h3 class="alerta"><i class="bi bi-exclamation-triangle"></i> O cronograma a seguir pode ser alterado unilateralmente e 
+                            sem publicação ou aviso prévio por parte da VIASOFT, não cabendo ônus ou penalidades.</h3>
+                    </div>     
+                </div>
+
+            </div>
+
+            <!--Filtros-->
+
+                <div id="filtro">
+
+                    <div class="titulos-filtros">
+                        <p class="titulo-status">Status</p>
+                        <p class="titulo-prazo">Prazo</p>
+                        <p class="titulo-modulo">Módulo</p>
+                </div>
+
+                    <div class="opcoes-filtros">        
+                        <select onclick="mudar_status()" id="status" style="background: rgb(244, 245, 247); color: black;">
+                            <option value="-" select>Todos os Status</option>
+                            <option value="Em breve" class="breve-10">Em Breve</option>
+                            <option value="Lançada">Lançada</option>
+                            <option value="Futura">Futura</option>
+                        </select>
+
+                        <select onclick="mudar_prazo()" id="prazo" style="background: rgb(244, 245, 247); color: black;">
+                            <option value="-" select>Todos os Prazos</option>
+                            <option value="1°">1° Semestre de 2022</option>
+                            <option value="2°">2° Semestre de 2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                        </select>
+                        <select onclick="mudar_modulo()" id="modulo" style="background: rgb(244, 245, 247); color: black;">
+                            <option value="-" select>Todos os Módulos</option>
+                            <option value="Fiscal">Fiscal</option>
+                            <option value="Mobile">Mobile</option>
+                            <option value="REAG">REAG</option>
+                            <option value="Café">Café</option>
+                            <option value="AgroFrut">AgroFrut</option>
+                            <option value="Industria">Industria</option>
+                            <option value="Leite">Leite</option>
+                            <option value="Sementes">Sementes</option>
+                            <option value="Contábil">Contábil</option>
+                        </select>
+                        <button class="btn-redefinir" onclick="reset()">Redefinir</button>
+                    </div>
+
+                </div>
+
+                <!--Srcipt de Resetar Filtros-->
+
+                <script>
+                    function reset() {
+                        location.reload();
+                    }
+                </script>
+
+                <!--Script para mudar a cor do Filtro ao Clicar-->
+
+                <script>
+                    var btn_status = document.getElementById('status');
+                    var btn_prazo = document.getElementById('prazo');
+                    var btn_modulo = document.getElementById('modulo');
+
+                    function mudar_status() {
+                        if(btn_status.style.color === "black") {
+                            btn_status.style.background = "#253858";
+                            btn_status.style.color = "#FFFFFF";
+                        } else {
+                            btn_status.style.background = "#F4F5F7";
+                            btn_status.style.color = "black";
+                        }
+                    }
+
+                    function mudar_prazo () {
+                        if(btn_prazo.style.color === "black") {
+                            btn_prazo.style.background = "#253858";
+                            btn_prazo.style.color = "#FFFFFF";
+                        } else {
+                            btn_prazo.style.background = "#F4F5F7";
+                            btn_prazo.style.color = "black";
+                        }
+                    }
+
+                    function mudar_modulo() {
+                        if(btn_modulo.style.color === "black") {
+                            btn_modulo.style.background = "#253858";
+                            btn_modulo.style.color = "#FFFFFF";
+                        } else {
+                            btn_modulo.style.background = "#F4F5F7";
+                            btn_modulo.style.color = "black";
+                        }
+                    }
+
+                </script>
+
+                <div class="coluna-mestre">
+                    <div class="container table-titulos">
+                        <div class="row row-2 row-cols-4">
+                        <div class="col table-titulos-des table-descricao table-descricao2"><i class="bi bi-ui-checks"></i> | Descrição</div>
+                        <div class="col table-titulos-des table-status"><i class="bi bi-capslock-fill"></i> | Status</div>
+                        <div class="col table-titulos-des table-prazo"><i class="bi bi-clock-fill"></i> | Prazo</div>
+                        <div class="col table-titulos-des table-produtos table-produtos2"><i class="bi bi-tags"></i> | Modulo</div>
+                        </div>
+                    </div>
+                </div>
+
+            <!--Itens-->
+
+                <div id="escrever">
+
+                    <div class="modelo_atualizacao" id="att">
+                        <div class="container tabela-produtos tabela-produtos-1" id="teste">
+                            <div class="row row-cols-4 produto">
+                                <div class="col table-descricao-des table-descricao">
+                                    <h4 id="titulo_modifica" class="paulo">Titulo Aqui</h4>
+                                    <p id="descricao_modifica" class="segundo">Descrição Aqui</p>
+                                    <a id='link_substituir' style="display: none;">
+                                        Saber Mais</a> <i id="seta_link" class="bi bi-arrow-right" style="display: none;"></i>
+                                </div>
+                                <div class="col table-descricao-des table-status status">
+                                    <p class="finalizada" id="finalizada" style="display: none">Lançada</p>
+                                    <p class="breve" id="breve" style="display: none">Em breve</p>
+                                    <p class="futura" id="futura" style="display: none">Futura</p>
+                                </div>
+                                <div class="col table-descricao-des table-prazo prazo">
+                                    <p id="prazo_escrever"></p>
+                                </div>
+                                <div  class="col table-descricao-des table-produtos modulo">
+                                    <p class="cafe icon" id="cafe"  style="display: none"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_CAFÉ.svg" alt=""> | Café</p>
+                                    <p class="cereais icon" id="cereais" style="display: none"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_CEREAIS.svg" alt=""> | Cereais</p>
+                                    <p class="expedicao icon" id="expedicao" style="display: none"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_EXPEDIÇÃO.svg" alt=""> | Expedição</p>
+                                    <p class="Financeiro icon" id="Financeiro" style="display: none"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_FINANCEIRO.svg" alt=""> | Financeiro</p>
+                                    <p class="Fiscal icon" id="Fiscal" style="display: none"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_FISCAL.svg" alt=""> | Fiscal</p>
+                                    <p class="Industria icon" id="Industria" style="display: none"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_INDÚSTRIA.svg" alt=""> | Indústria</p>
+                                    <p class="Insumos icon" id="Insumos" style="display: none"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_INSUMOS.svg" alt=""> | Insumos</p>
+                                    <p class="Lavoura icon" id="Lavoura" style="display: none"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_LAVOURA.svg" alt=""> | Lavoura</p>
+                                    <p class="Leite icon" id="Leite" style="display: none"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_LEITE.svg" alt=""> | Leite</p>
+                                    <p class="Mobile icon" id="Mobile" style="display: none"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_MOBILE.svg" alt=""> | Mobile</p>
+                                    <p class="REAG icon" id="REAG" style="display: none"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_REAG.svg" alt=""> | REAG</p>
+                                    <p class="Sementes icon" id="Sementes" style="display: none"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_SEMENTES.svg" alt=""> | Sementes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container tabela-produtos tabela-produtos-1">
+                        <div class="row row-cols-4 produto">
+                            <div class="col table-descricao-des table-descricao">
+                                <h4>Obrigação de NFP-e por Endereço</h4>
+                                <p>Implementação de parametrização para definir se obriga NFP-e por endereço.</p>
+                                <a href="https://nimitz.atlassian.net/wiki/spaces/TS/pages/2798583858/Road+Map#:~:text=responsavel%20pela%20integra%C3%A7%C3%A3o.-,AG%2D6127,verificado%20se%20o%20endere%C3%A7o%20selecionado%20obriga%20informar%20a%20nota%20do%20produtor.,-AG%2D6092">
+                                    Saber Mais
+                                </a> <i class="bi bi-arrow-right"></i>
+                            </div>
+                            <div class="col table-descricao-des table-status status">
+                                <p class="finalizada">Lançada</p>
+                            </div>
+                            <div class="col table-descricao-des table-prazo prazo">
+                                <p>1° Semestre de 2022</p>
+                            </div>
+                            <div  class="col table-descricao-des table-produtos modulo">
+                                <p class="alinhar-modulo"><i class="bi bi-currency-exchange"></i> | Fiscal</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container tabela-produtos tabela-produtos-1">
+                        <div class="row row-cols-4 produto">
+                            <div class="col table-descricao-des table-descricao">
+                                <h4>Compensação de Contas a receber</h4>
+                                <p>Realizar a baixa automaticamente das “duplicatas a receber” emitidas.</p>
+                                <a href="https://nimitz.atlassian.net/wiki/spaces/TS/pages/2798583858/Road+Map#:~:text=da%20nota%20fiscal.-,AG%2D3375,.,-AG%2D1725">
+                                    Saber Mais</a> <i class="bi bi-arrow-right"></i>
+                            </div>
+                            <div class="col table-descricao-des table-status status">
+                                <p class="finalizada">Lançada</p>
+                            </div>
+                            <div class="col table-descricao-des table-prazo prazo">
+                                <p>1° Semestre de 2022</p>
+                            </div>
+                            <div  class="col table-descricao-des table-produtos modulo">
+                                <p class="alinhar-modulo"><i class="bi bi-currency-exchange"></i> | Fiscal</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container tabela-produtos tabela-produtos-1">
+                        <div class="row row-cols-4 produto">
+                            <div class="col table-descricao-des table-descricao">
+                                <h4>Campo p/ consumo de Água/Gás/Energia</h4>
+                                <p> Realizar o lançamento de notas fiscais referente a Compra de Energia Elétrica, Gás ou de D’Água Canalizada.</p>
+                                <a href="https://nimitz.atlassian.net/wiki/spaces/TS/pages/2798583858/Road+Map#:~:text=AG%2D3933,da%20nota%20fiscal.">
+                                    Saber Mais
+                                </a> <i class="bi bi-arrow-right"></i>
+                            </div>
+                            <div class="col table-descricao-des table-status status">
+                                <p class="finalizada">Lançada</p>
+                            </div>
+                            <div class="col table-descricao-des table-prazo prazo">
+                                <p>1° Semestre de 2022</p>
+                            </div>
+                            <div  class="col table-descricao-des table-produtos modulo">
+                                <p class="alinhar-modulo"><i class="bi bi-currency-exchange"></i> | Fiscal</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container tabela-produtos tabela-produtos-1">
+                        <div class="row row-cols-4 produto">
+                            <div class="col table-descricao-des table-descricao">
+                                <h4>Ordem de Transferência entre Produtores</h4>
+                                <p>Realizar a transferência de saldo de um produtor para o outro, onde não ocorre a movimentação física do produtor, apenas é feita a transferência fiscal.</p>
+                                <a href="">
+                                    Saber Mais </a> <i class="bi bi-arrow-right"></i>
+                            </div>
+                            <div class="col table-descricao-des table-status status">
+                                <p class="finalizada">Lançada</p>
+                            </div>
+                            <div class="col table-descricao-des table-prazo prazo">
+                                <p>1° Semestre de 2022</p>
+                            </div>
+                            <div  class="col table-descricao-des table-produtos modulo">
+                                <p class="alinhar-modulo"><i class="bi bi-currency-exchange"></i> | Fiscal</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="container tabela-produtos tabela-produtos-1">
+                        <div class="row row-cols-4 produto">
+                            <div class="col table-descricao-des table-descricao">
+                                <h4>Compra de Café com NF's de Terceiros</h4>
+                                <p>Permitir com que seja feita a compra de Café com Notas Fiscais de Terceiros.</p>
+                                <a href="https://nimitz.atlassian.net/wiki/spaces/TS/pages/2798583858/Road+Map#:~:text=AG%2D4285,do%20tipo%20Entrada">
+                                    Saber Mais</a> <i class="bi bi-arrow-right"></i>
+                            </div>
+                            <div class="col table-descricao-des table-status status">
+                                <p class="finalizada">Lançada</p>
+                            </div>
+                            <div class="col table-descricao-des table-prazo prazo">
+                                <p>1° Semestre de 2022</p>
+                            </div>
+                            <div  class="col table-descricao-des table-produtos modulo">
+                                <p class="alinhar-modulo"><i class="bi bi-currency-exchange"></i> | Fiscal</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="container tabela-produtos tabela-produtos-1">
+                        <div class="row row-cols-4 produto">
+                            <div class="col table-descricao-des table-descricao">
+                                <h4>Laboratório de Sementes</h4>
+                                <p>Será adicionado o usuário que efetuou a inclusão dos resultados e cada alteração no processo.</p>
+                            </div>
+                            <div class="col table-descricao-des table-status status">
+                                <p class="breve">Em breve</p>
+                            </div>
+                            <div class="col table-descricao-des table-prazo prazo">
+                                <p>2° Semestre de 2022</p>
+                            </div>
+                            <div  class="col table-descricao-des table-produtos modulo">
+                                <p><i class="bi bi-image-alt"></i> | Sementes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container tabela-produtos tabela-produtos-1">
+                        <div class="row row-cols-4 produto">
+                            <div class="col table-descricao-des table-descricao">
+                                <h4>Rastreabilidade de Sementes</h4>
+                                <p>Adequar rastreabilidade de sementes para cumprimento da LGPD.</p>
+                            </div>
+                            <div class="col table-descricao-des table-status status">
+                                <p class="breve">Em breve</p>
+                            </div>
+                            <div class="col table-descricao-des table-prazo prazo">
+                                <p>2° Semestre de 2022</p>
+                            </div>
+                            <div  class="col table-descricao-des table-produtos modulo">
+                                <p><i class="bi bi-image-alt"></i> | Sementes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container tabela-produtos tabela-produtos-1">
+                        <div class="row row-cols-4 produto">
+                            <div class="col table-descricao-des table-descricao">
+                                <h4>Processo de integração do REAG</h4>
+                                <p>Converter processo de integração do REAG de envio de arquivos para envio em formato REST.</p>
+                            </div>
+                            <div class="col table-descricao-des table-status status">
+                                <p class="breve">Em breve</p>
+                            </div>
+                            <div class="col table-descricao-des table-prazo prazo">
+                                <p>1° Semestre de 2022</p>
+                            </div>
+                            <div  class="col table-descricao-des table-produtos modulo">
+                                <p><i class="bi bi-clipboard-data"></i> | REAG</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container tabela-produtos tabela-produtos-1">
+                        <div class="row row-cols-4 produto">
+                            <div class="col table-descricao-des table-descricao">
+                                <h4>Embalagem do lote de Sementes (Terceiros)</h4>
+                                <p>As sementeiras podem comprar sementes para revender é necessário visualizar a embalagem deste lote nas notas de entrada/saída, com lotes de terceiros.</p>
+                            </div>
+                            <div class="col table-descricao-des table-status status">
+                                <p class="futura">Futura</p>
+                            </div>
+                            <div class="col table-descricao-des table-prazo prazo">
+                                <p>2023</p>
+                            </div>
+                            <div  class="col table-descricao-des table-produtos modulo">
+                                <p><i class="bi bi-image-alt"></i> | Sementes</p>
+                                <p class="alinhar-modulo"><i class="bi bi-currency-exchange"></i> | Fiscal</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container tabela-produtos tabela-produtos-1">
+                        <div class="row row-cols-4 produto">
+                            <div class="col table-descricao-des table-descricao">
+                                <h4>Gerar pedido através da Visita Técnica</h4>
+                                <p>Permitir a geração de pedidos através de uma visita técnica, permitindo assim realizar o vínculo entre os registros e ter uma rastreabilidade de quantas visitas estão convertendo em negociações para a empresa.</p>
+                            </div>
+                            <div class="col table-descricao-des table-status status">
+                                <p class="futura">Futura</p>
+                            </div>
+                            <div class="col table-descricao-des table-prazo prazo">
+                                <p>2023</p>
+                            </div>
+                            <div  class="col table-descricao-des table-produtos modulo">
+                                <p class="alinhar-modulo"><i class="bi bi-phone-fill"></i> | CRM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            <!--Script dos Filtros-->
+
+            <script>
+                $(document).ready(function() {
+                $("#filtro select").change(function() {
+                    applyFilter();
+                });
+
+                function applyFilter() {
+                    $(".produto").css('display', '');
+                    $(".produto").css('border', '0.5px solid #8d8d8d21');
+                    $("#filtro select").each(function() {
+                    var categoria = this.id;
+                    var pesquisa = $(this).val().toLowerCase();
+
+                    $(".produto").find('.' + categoria).each(function() {
+                        var textoCategoria = $(this).text();
+                        var corresponde = textoCategoria.toLowerCase().indexOf(pesquisa) >= 0 || pesquisa == '-';
+                        if (!corresponde) {
+                        $(this).parent().css('display', 'none');
+                        $(this).parent().css('border', 'none');
+                        }
+                    });
+                    });
+                }
+                });
+            </script>
+
+        </body>
+
+        </div>
+    </section>
+
+    <section>
+
+        <div class="site-interno">
+            <div class="dados">
+
+            <!--Inserir Data de Modificação-->
+
+            <div class="data_ctn" id="data_ctn">
+                <label for="data_insert" class="form-label">Data de Modificação:</label>
+                <input type="text" class="form-control" placeholder="06 de Agosto de 2022" id="data_insert">
+                <button onclick="insert_data(), sumir_data()">Próximo</button>
+
+                <!--Script para Inserir a Data-->
+                    <script>
+                        var dataElemento = document.getElementById('data');
+                        var inserir = document.getElementById("data_insert");
+                        var container = document.getElementById('data_ctn');
+
+                            function insert_data() {
+                                dataElemento.innerHTML = inserir.value;
+                                container.style.display = 'none';
+                            }
+                    </script>
+            </div>
+
+            <!--Fim do Inserir Data-->
+
+            <!--Inserir Titulo-->
+
+            <div class="titulo-insert" id="titulo-insert">
+
+          
+                
+                            <label for="titulo" class="form-label">Título</label>
+                            <input type="text" class="form-control" placeholder="Digite o Título da Melhoria" id="titulo" aria-describedby="emailHelp">
+                            <label for="descricao" class="form-label">Descrição</label>
+                            <input type="text" class="form-control" placeholder="Digite a Descrição da Melhoria" id="descricao" aria-describedby="emailHelp">
+
+                        <button onclick="inserir_titulo(), sumir_titulo()">Próximo</button>
+                        
+
+
+                    <script>
+
+                
+                        var operacao = 0;
+                        // var resposta = prompt("Texto");
+                        var teste = document.getElementById("titulo");
+                        var teste2 = document.getElementById("descricao");
+                                    
+                
+                
+                        function inserir_titulo() {
+                            
+                            var elementoOriginal = document.querySelector("#teste");
+                            var elementoClone = elementoOriginal.cloneNode(true);
+                            var elementoA = document.getElementById('titulo_modifica');
+                            var elementoS = document.getElementById('descricao_modifica');
+                            var escrever = document.getElementById('produtos');
+
+                            var bola = 1; 
+                
+                            // inserindo o elemento na paǵina
+                            elementoA.innerHTML = teste.value;
+                            elementoS.innerHTML = teste2.value;
+
+                            var bola = (bola + 1);
+                            
+                        }
+
+                       
+                    </script>
+
+                </div>
+
+            </div>
+
+            <!--Fim - Titulo-->
+
+            <!--Selecionar o Prazo-->
+
+                <div class="prazo" id="prazo-ctn">
+                    <p>Selecione o <b>prazo</b> da Tarefa:</p>
+                    <div class="status">
+                    <input type = "checkbox" id ="1_Semestre" name = "1_Semestre" value ="1_Semestre">
+                    <label for ="1_Semestre"> 1° Semestre (2022) </label>
+                    <input type = "checkbox" id ="2_Semestre" name = "2_Semestre" value ="2_Semestre">
+                    <label for ="2_Semestre"> 2° Semestre (2022) </label>
+                    <input type = "checkbox" id ="2023" name = "2023" value ="2023">
+                    <label for ="2023"> 2023 </label>
+                    <input type = "checkbox" id ="2024" name = "2024" value ="2024">
+                    <label for ="2024"> 2024 </label>
+
+                    <button onclick="pro_prazo(), sumir_prazo()">Próximo</button>
+
+                    <script>        
+                    
+                    function pro_prazo() {
+                        let Semestre1 = document.getElementById('1_Semestre');
+                        let Semestre2 = document.getElementById('2_Semestre');
+                        let Semestre2023 = document.getElementById('2023');
+                        let Semestre2024 = document.getElementById('2024');
+                        var prazoEscrita = document.getElementById('prazo_escrever');
+
+
+
+                        if(Semestre1.checked) {
+                            prazoEscrita.innerHTML = '1° SEMESTRE DE 2022';
+                        }
+                        if(Semestre2.checked) {
+                            prazoEscrita.innerHTML = '2° SEMESTRE DE 2022';
+                        }
+                        if(Semestre2023.checked) {
+                            prazoEscrita.innerHTML = '2023';
+                        }
+                        if(Semestre2024.checked) {
+                            prazoEscrita.innerHTML = '2024';
+                        }
+                    }
+
+                    </script>
+                    </div>
+                </div>
+
+            <!--Fim - Prazo-->
+
+            <!--Selecionar o Status-->
+
+                <div class="status" id="status-ctn">
+                    <p>Selecione o <b>Status</b> da Tarefa:</p>
+                    <div class="status">
+                    <input type = "checkbox" id ="1_Lancada" name = "1_Lancada" value ="1_Lancada">
+                    <label for ="1_Lancada"> Lançada </label>
+                    <input type = "checkbox" id ="2_Breve" name = "2_Breve" value ="2_Breve">
+                    <label for ="2_Breve"> Em Breve </label>
+                    <input type = "checkbox" id ="3_Futura" name = "3_Futura" value ="3_Futura">
+                    <label for ="3_Futura"> Futura </label>
+
+                    <button onclick="pro_status(), sumir_status() ">Próximo</button>
+                    </div>
+                    
+
+                    <script>
+
+                        function pro_status() {
+                            let Opcao1 = document.getElementById('1_Lancada');
+                            let Opcao2 = document.getElementById('2_Breve');
+                            let Opcao3 = document.getElementById('3_Futura');
+                            var lancadaOpcao = document.getElementById('finalizada');
+                            var breveOpcao = document.getElementById('breve');
+                            var futuraOpcao = document.getElementById('futura');
+
+                            if (Opcao1.checked) {
+                                lancadaOpcao.style.display = 'inline';
+                                futuraOpcao.style.display = 'none';
+                                breveOpcao.style.display = 'none';
+                            } 
+                             else if (Opcao2.checked) {
+                                breveOpcao.style.display = 'inline';
+                                futuraOpcao.style.display = 'none';
+                                lancadaOpcao.style.display = 'none';
+                            }
+                            else {
+                                futuraOpcao.style.display = 'inline';
+                                breveOpcao.style.display = 'none';
+                                lancadaOpcao.style.display = 'none';
+                            }
+                        }
+
+                    </script>
+                </div>
+
+            <!--Fim - Status-->
+
+                <div class="inserir-link" id="inserir_link" style="display: none;">
+
+                    <label for="link_diretorio" class="form-label">Insira o link:</label>
+                    <input type="text" class="form-control" placeholder="Link" id="link_diretorio" aria-describedby="emailHelp">
+
+                    <button onclick="sumir_link(), insert_link()">Próximo</button>
+                                            
+                </div>
+
+                <!--Inserir Link-->
+
+                <script>
+                    var seta = document.getElementById('seta_link');
+                    var link_substituir = document.getElementById('link_substituir');
+
+                    function insert_link() {
+                        link_substituir.setAttribute('href', link_diretorio.value);
+                        link_substituir.style.display = 'inline';
+                        seta.style.display = 'inline';
+                        link_substituir.removeAttribute('id');
+                    }
+                </script>
+
+            <!--Selecionar o Modulo-->
+
+                <div class="modulo" id="modulo-ctn">
+                    <p>Selecione o <b>Módulo</b> da Tarefa:</p>
+                    <div class="modulo">
+                    <input type = "checkbox" id ="1_cafe" name = "1_cafe" value ="1_cafe">
+                    <label for ="1_cafe"> Café</label>
+                    <input type = "checkbox" id ="2_cereais" name = "2_cereais" value ="2_cereais">
+                    <label for ="2_cereais"> Cereais </label>
+                    <input type = "checkbox" id ="3_expedicao" name = "3_expedicao" value ="3_expedicao">
+                    <label for ="3_expedicao"> Expedição </label>
+                    <input type = "checkbox" id ="4_Financeiro" name = "4_Financeiro" value ="4_Financeiro">
+                    <label for ="4_Financeiro"> Financeiro </label>
+                    <input type = "checkbox" id ="5_Fiscal" name = "5_Fiscal" value ="5_Fiscal">
+                    <label for ="5_Fiscal"> Fiscal </label>
+                    <input type = "checkbox" id ="6_Industria" name = "6_Industria" value ="6_Industria">
+                    <label for ="6_Industria"> Industria </label>
+                    <input type = "checkbox" id ="7_Insumo" name = "7_Insumo" value ="7_Insumo">
+                    <label for ="7_Insumo"> Insumos </label>
+                    <input type = "checkbox" id ="8_Lavoura" name = "8_Lavoura" value ="8_Lavoura">
+                    <label for ="8_Lavoura"> Lavoura </label>
+                    <input type = "checkbox" id ="9_Leite" name = "9_Leite" value ="9_Leite">
+                    <label for ="9_Leite"> Leite </label>
+                    <input type = "checkbox" id ="10_Mobile" name = "10_Mobile" value ="10_Mobile">
+                    <label for ="10_Mobile"> Mobile </label>
+                    <input type = "checkbox" id ="11_REAG" name = "11_REAG" value ="11_REAG">
+                    <label for ="11_REAG"> REAG </label>
+                    <input type = "checkbox" id ="12_Sementes" name = "12_Sementes" value ="12_Sementes">
+                    <label for ="12_Sementes"> Sementes </label>
+
+                    <button onclick="pro_modulo(), eliminar()">Próximo</button>
+                    </div>
+
+                    <script>
+
+                    function pro_modulo() {
+                        let Opcao1 = document.getElementById('1_cafe');
+                        let Opcao2 = document.getElementById('2_cereais');
+                        let Opcao3 = document.getElementById('3_expedicao');
+                        let Opcao4 = document.getElementById('4_Financeiro');
+                        let Opcao5 = document.getElementById('5_Fiscal');
+                        let Opcao6 = document.getElementById('6_Industria');
+                        let Opcao7 = document.getElementById('7_Insumo');
+                        let Opcao8 = document.getElementById('8_Lavoura');
+                        let Opcao9 = document.getElementById('9_Leite');
+                        let Opcao10 = document.getElementById('10_Mobile');
+                        let Opcao11 = document.getElementById('11_REAG');
+                        let Opcao12 = document.getElementById('12_Sementes');
+
+                        var cafeOpcao = document.getElementById('cafe');
+                        var cereaisOpcao = document.getElementById('cereais');
+                        var expedicaoOpcao = document.getElementById('expedicao');
+                        var financeiroOpcao = document.getElementById('Financeiro');
+                        var fiscalOpcao = document.getElementById('Fiscal');
+                        var industriaOpcao = document.getElementById('Industria');
+                        var insumoOpcao = document.getElementById('Insumos');
+                        var lavouraOpcao = document.getElementById('Lavoura');
+                        var leiteOpcao = document.getElementById('Leite');
+                        var mobileOpcao = document.getElementById('Mobile');
+                        var REAGOpcao = document.getElementById('REAG');
+                        var SementesOpcao = document.getElementById('Sementes');
+                        var conferir = document.getElementById('conferir');
+                        var modulo_ctn = document.getElementById('modulo-ctn');
+                        var melhoria = document.getElementById('teste');
+                        var opcoes = document.getElementById('opcoes');
+
+                        if (Opcao1.checked) {
+                            cafeOpcao.style.display = 'block';
+                        } 
+                        if (Opcao2.checked) {
+                            cereaisOpcao.style.display = 'block';
+                        }
+                        if (Opcao3.checked) {
+                            expedicaoOpcao.style.display = 'block';
+                        }
+                        if (Opcao4.checked) {
+                            financeiroOpcao.style.display = 'block';
+                        }
+                        if (Opcao5.checked) {
+                            fiscalOpcao.style.display = 'block';
+                        }
+                        if (Opcao6.checked) {
+                            industriaOpcao.style.display = 'block';
+                        }
+                        if (Opcao7.checked) {
+                            insumoOpcao.style.display = 'block';
+                        }
+                        if (Opcao8.checked) {
+                            lavouraOpcao.style.display = 'block';
+                        }
+                        if (Opcao9.checked) {
+                            leiteOpcao.style.display = 'block';
+                        }
+                        if (Opcao10.checked) {
+                            mobileOpcao.style.display = 'block';
+                        }
+                        if (Opcao11.checked) {
+                            REAGOpcao.style.display = 'block';
+                        }
+                        if (Opcao12.checked) {
+                            SementesOpcao.style.display = 'block';
+                        }
+
+                        modulo_ctn.style.display = 'none';
+                        conferir.style.display = 'block';
+                        melhoria.style.display = 'block';
+                        opcoes.style.display = 'block';
+
+
+                    }
+
+                    </script>
+
+                </div>
+
+            <!--Fim - Modulo-->
+        </div>
+
+        <div class="conferir_insercao" id="conferir">
+            <h1>Atenção: Confira se os dados inseridos acima estão corretos!</h1>
+            <p>Em caso de erros, recadastre a melhoria.</p> 
+        </div>
+
+        <!--Site para fazer a copia--> 
+
+        <div class="modelo_atualizacao" style="display: none;">
+            <div class="container tabela-produtos tabela-produtos-1" id="teste_model">
+                <div class="row row-cols-4 produto">
+                    <div class="col table-descricao-des table-descricao">
+                        <h4 id="titulo_modifica" class="paulo">Titulo Aqui</h4>
+                        <p id="descricao_modifica" class="segundo">Descrição Aqui</p>
+                        <a id='link_substituir' style="display: none;">
+                            Saber Mais</a> <i id="seta_link" class="bi bi-arrow-right" style="display: none;"></i>
+                    </div>
+                    <div class="col table-descricao-des table-status status">
+                        <p class="finalizada" id="finalizada" style="display: inline">Lançada</p>
+                        <p class="breve" id="breve" style="display: inline">Em breve</p>
+                        <p class="futura" id="futura" style="display: inline">Futura</p>
+                    </div>
+                    <div class="col table-descricao-des table-prazo prazo">
+                        <p id="prazo_escrever"></p>
+                    </div>
+                    <div  class="col table-descricao-des table-produtos modulo">
+                        <p class="cafe icon" id="cafe"  style="display: block"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_CAFÉ.svg" alt=""> | Café</p>
+                        <p class="cereais icon" id="cereais" style="display: block"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_CEREAIS.svg" alt=""> | Cereais</p>
+                        <p class="expedicao icon" id="expedicao" style="display: block"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_EXPEDIÇÃO.svg" alt=""> | Expedição</p>
+                        <p class="Financeiro icon" id="Financeiro" style="display: block"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_FINANCEIRO.svg" alt=""> | Financeiro</p>
+                        <p class="Fiscal icon" id="Fiscal" style="display: block"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_FISCAL.svg" alt=""> | Fiscal</p>
+                        <p class="Industria icon" id="Industria" style="display: block"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_INDÚSTRIA.svg" alt=""> | Indústria</p>
+                        <p class="Insumos icon" id="Insumos" style="display: block"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_INSUMOS.svg" alt=""> | Insumos</p>
+                        <p class="Lavoura icon" id="Lavoura" style="display: block"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_LAVOURA.svg" alt=""> | Lavoura</p>
+                        <p class="Leite icon" id="Leite" style="display: block"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_LEITE.svg" alt=""> | Leite</p>
+                        <p class="Mobile icon" id="Mobile" style="display: block"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_MOBILE.svg" alt=""> | Mobile</p>
+                        <p class="REAG icon" id="REAG" style="display: block"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_REAG.svg" alt=""> | REAG</p>
+                        <p class="Sementes icon" id="Sementes" style="display: block"><img src="/geral/img/AGROTITAN - ROADMAP - ICONS/ROADMAP-ICONE-_SEMENTES.svg" alt=""> | Sementes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="opcoes" id="opcoes">
+            <button onclick="resetar_clone(), sumir_data()">Recadastrar melhoria</button>
+
+            <button onclick="eliminar(), inserir(), resetar_clone(), reload(), sumir_data(), nova_melhoria()">Cadastrar Outra Melhoria</button>
+
+            <button onclick="inserir(), reload(), finalizar()">Finalizar</button>
+        </div>
+
+        <div class="copiar_html" id="copiar_html" style="display: none;">
+            <button onclick="copiarHtml()">Copiar HTML</button>
+
+            <textarea id="demo"></textarea>
+            <br>
+            <script>
+
+            function copiarHtml() {
+            var x = document.getElementsByTagName("section")[0];
+            var z = x.outerHTML;
+            document.getElementById("demo").innerHTML = z;
+            document.getElementById("demo").select();
+            document.execCommand('copy');
+            alert("Atenção: HTML copiado! Siga as instruções repassadas para concluir a atualização.");
+            }
+            </script>
+        </div>
+
+        <script>
+
+            var opcoes = document.getElementById('opcoes');
+            var copiar = document.getElementById('copiar_html');
+
+            function finalizar() {
+                opcoes.style.display = 'none';
+                copiar_html.style.display = 'block';
+            }
+
+        </script>
+
+        <!--Eliminar modulos/status não utilizados-->
+        
+        <script>
+            var cafeOpcao = document.getElementById('cafe');
+            var cereaisOpcao = document.getElementById('cereais');
+            var expedicaoOpcao = document.getElementById('expedicao');
+            var financeiroOpcao = document.getElementById('Financeiro');
+            var fiscalOpcao = document.getElementById('Fiscal');
+            var industriaOpcao = document.getElementById('Industria');
+            var insumoOpcao = document.getElementById('Insumos');
+            var lavouraOpcao = document.getElementById('Lavoura');
+            var leiteOpcao = document.getElementById('Leite');
+            var mobileOpcao = document.getElementById('Mobile');
+            var REAGOpcao = document.getElementById('REAG');                        
+            var SementesOpcao = document.getElementById('Sementes');
+            var lancadaOpcao = document.getElementById('finalizada');
+            var breveOpcao = document.getElementById('breve');
+            var futuraOpcao = document.getElementById('futura');
+
+            function nova_melhoria() {
+                tituloCtn.style.display = 'block';
+            }
+
+            function eliminar() {
+
+                if(cafeOpcao.style.display === 'none') {
+                    cafeOpcao.remove();
+                }
+                if(cereaisOpcao.style.display === 'none') {
+                    cereaisOpcao.remove();
+                }
+                if(expedicaoOpcao.style.display === 'none') {
+                    expedicaoOpcao.remove();
+                }
+                if(financeiroOpcao.style.display === 'none') {
+                    financeiroOpcao.remove();
+                }
+                if(fiscalOpcao.style.display === 'none'){
+                    fiscalOpcao.remove();
+                }
+                if(industriaOpcao.style.display === 'none'){
+                    industriaOpcao.remove();
+                }
+                if(lavouraOpcao.style.display === 'none') {
+                    lavouraOpcao.remove();
+                }
+                if(leiteOpcao.style.display === 'none') {
+                    leiteOpcao.remove();
+                }
+                if(mobileOpcao.style.display === 'none') {
+                    mobileOpcao.remove();
+                }
+                if(REAGOpcao.style.display === 'none') {
+                    REAGOpcao.remove();
+                }
+                if(SementesOpcao.style.display === 'none'){
+                    SementesOpcao.remove();
+                }
+                if(lancadaOpcao.style.display === 'none') {
+                    lancadaOpcao.remove();
+                }
+                if(breveOpcao.style.display === 'none') {
+                    breveOpcao.remove();
+                }
+                if(futuraOpcao.style.display === 'none') {
+                    futuraOpcao.remove();
+                }
+            }
+
+        </script>
+
+        <!--Resetar Campos-->
+
+        <script>
+
+                var lancadaOpcao = document.getElementById('finalizada');
+                var breveOpcao = document.getElementById('breve');
+                var futuraOpcao = document.getElementById('futura');
+                var cafeOpcao = document.getElementById('cafe');
+                var cereaisOpcao = document.getElementById('cereais');
+                var expedicaoOpcao = document.getElementById('expedicao');
+                var financeiroOpcao = document.getElementById('Financeiro');
+                var fiscalOpcao = document.getElementById('Fiscal');
+                var industriaOpcao = document.getElementById('Industria');
+                var insumoOpcao = document.getElementById('Insumos');
+                var lavouraOpcao = document.getElementById('Lavoura');
+                var leiteOpcao = document.getElementById('Leite');
+                var mobileOpcao = document.getElementById('Mobile');
+                var REAGOpcao = document.getElementById('REAG');
+                var SementesOpcao = document.getElementById('Sementes');
+                var melhoria = document.getElementById('teste');
+                /*Checkbox - Modulos*/
+                var Opcao1 = document.getElementById('1_cafe');
+                var Opcao2 = document.getElementById('2_cereais');
+                var Opcao3 = document.getElementById('3_expedicao');
+                var Opcao4 = document.getElementById('4_Financeiro');
+                var Opcao5 = document.getElementById('5_Fiscal');
+                var Opcao6 = document.getElementById('6_Industria');
+                var Opcao7 = document.getElementById('7_Insumo');
+                var Opcao8 = document.getElementById('8_Lavoura');
+                var Opcao9 = document.getElementById('9_Leite');
+                var Opcao10 = document.getElementById('10_Mobile');
+                var Opcao11 = document.getElementById('11_REAG');
+                var Opcao12 = document.getElementById('12_Sementes');
+                /*Checkbox - Status*/
+
+                var Opcao1_s = document.getElementById('1_Lancada');
+                var Opcao2_s = document.getElementById('2_Breve');
+                var Opcao3_s = document.getElementById('3_Futura');
+
+                /*Checkbox - Prazo*/
+
+                var Semestre1 = document.getElementById('1_Semestre');
+                var Semestre2 = document.getElementById('2_Semestre');
+                var Semestre2023 = document.getElementById('2023');
+                var Semestre2024 = document.getElementById('2024');
+
+                /*Titulo e Descrição*/ 
+
+                var elementoTitulo = document.getElementById("titulo");
+                var elementoDescricao = document.getElementById("descricao");
+
+                var opcoes = document.getElementById('opcoes');
+                var conferir = document.getElementById('conferir');
+
+                /*Resetar - Link */
+
+                var link_substituir = document.getElementById('link_substituir');
+                var link_diretorio = document.getElementById('link_diretorio');
+                var seta = document.getElementById('seta_link');
+                var checkboxLink = document.getElementById('link');
+
+                         
+            function resetar_clone() {
+
+                /*Sumir os módulos e status*/
+
+                cafeOpcao.style.display = 'none';
+                cereaisOpcao.style.display = 'none'; 
+                expedicaoOpcao.style.display = 'none';
+                financeiroOpcao.style.display = 'none';
+                fiscalOpcao.style.display = 'none';
+                industriaOpcao.style.display = 'none';
+                insumoOpcao.style.display = 'none';  
+                lavouraOpcao.style.display = 'none';    
+                leiteOpcao.style.display = 'none';    
+                mobileOpcao.style.display = 'none';
+                REAGOpcao.style.display = 'none';   
+                SementesOpcao.style.display = 'none';
+                lancadaOpcao.style.display = 'none';
+                futuraOpcao.style.display = 'none';
+                breveOpcao.style.display = 'none';   
+                
+                /*Resetar Checkbox - Modulo*/
+
+                Opcao1.checked = false;
+                Opcao2.checked = false;
+                Opcao3.checked = false;
+                Opcao4.checked = false;
+                Opcao5.checked = false;
+                Opcao6.checked = false;
+                Opcao7.checked = false;
+                Opcao8.checked = false;
+                Opcao9.checked = false;
+                Opcao10.checked = false;
+                Opcao11.checked = false;
+                Opcao12.checked = false;
+
+                /*Resetar Checkbox - Status*/
+
+                Opcao1_s.checked = false;
+                Opcao2_s.checked = false;
+                Opcao3_s.checked = false;
+
+
+                /*Restar Checkbox - Prazo*/
+
+                Semestre1.checked = false;
+                Semestre2.checked = false;
+                Semestre2023.checked = false;
+                Semestre2024.checked = false;
+
+                /*Limpar campos de Titulo e Descrição*/
+
+                elementoTitulo.value = '';
+                elementoDescricao.value = '';
+
+                melhoria.style.display = 'none';
+                opcoes.style.display = 'none';
+                conferir.style.display = 'none';
+
+                /*Limpar Campos de Inserir Link */
+
+                link_diretorio.value = '';
+
+            }
+
+
+        </script>
+
+        <script>
+
+            var cafeOpcao = document.getElementById('cafe');
+            var cereaisOpcao = document.getElementById('cereais');
+            var expedicaoOpcao = document.getElementById('expedicao');
+            var financeiroOpcao = document.getElementById('Financeiro');
+            var fiscalOpcao = document.getElementById('Fiscal');
+            var industriaOpcao = document.getElementById('Industria');
+            var insumoOpcao = document.getElementById('Insumos');
+            var lavouraOpcao = document.getElementById('Lavoura');
+            var leiteOpcao = document.getElementById('Leite');
+            var mobileOpcao = document.getElementById('Mobile');
+            var REAGOpcao = document.getElementById('REAG');
+            var SementesOpcao = document.getElementById('Sementes');
+
+            var lancadaOpcao = document.getElementById('finalizada');
+            var breveOpcao = document.getElementById('breve');
+            var futuraOpcao = document.getElementById('futura');
+
+            var elementoOriginal = document.querySelector("#teste");
+            var removerElemento = document.querySelector("#teste");
+            var elementoClone = elementoOriginal.cloneNode(true);
+            var elementoA = document.getElementById('titulo_modifica');
+
+            function reload() {
+                cafeOpcao.style.display = 'none';
+                cereaisOpcao.style.display = 'none';
+                expedicaoOpcao.style.display = 'none';
+                financeiroOpcao.style.display = 'none';
+                fiscalOpcao.style.display = 'none';
+                industriaOpcao.style.display = 'none';
+                lavouraOpcao.style.display = 'none';
+                insumoOpcao.style.display = 'none';
+                leiteOpcao.style.display = 'none';
+                mobileOpcao.style.display = 'none';
+                REAGOpcao.style.display = 'none';
+                SementesOpcao.style.display = 'none';
+
+                lancadaOpcao.style.display = 'none';
+                breveOpcao.style.display = 'none';
+                futuraOpcao.style.display = 'none';
+
+                elementoOriginal.setAttribute('id', 'teste')
+
+                if(operacao === 0) {
+                    removerElemento.remove();
+                    att.appendChild(elementoClone);
+                    operacao = 0;
+                } else {
+                    operacao = operacao+1;
+                }
+
+                moduloCtn.style.display = 'none';
+                opcoes.style.display = 'none';
+                conferir.style.display = 'none';
+
+            }
+
+
+        </script>
+
+        <script>
+
+            var dataCtn = document.getElementById('data_ctn');
+            var tituloCtn = document.getElementById('titulo-insert');
+            var prazoCtn = document.getElementById('prazo-ctn');
+            var statusCtn = document.getElementById('status-ctn');
+            var moduloCtn = document.getElementById('modulo-ctn');
+            var opcoes = document.getElementById('opcoes');
+            var conferir = document.getElementById('conferir');
+            var link_certificacao = document.getElementById('link');
+            var inserir_link = document.getElementById('inserir_link');
+            var link_substituir = document.getElementById('link_substituir');
+            var link_diretorio = document.getElementById('link_diretorio');
+            var seta = document.getElementById('seta_link');
+            var link = document.getElementById('inserir_link');
+            var Opcao1 = document.getElementById('1_Lancada');
+
+            function sumir_data() {
+                dataCtn.style.display = 'none';
+                tituloCtn.style.display = 'block';
+            }
+
+            function sumir_titulo () {
+                    tituloCtn.style.display = 'none';
+                    prazoCtn.style.display = 'block';
+                    seta.style.display = 'none';
+            }
+
+            function sumir_link() {
+                inserir_link.style.display = 'none';
+                moduloCtn.style.display = 'block';
+            }
+
+            function sumir_prazo() {
+                prazoCtn.style.display = 'none';
+                statusCtn.style.display = 'block';
+            }
+
+            function sumir_status() {
+
+                if(Opcao1.checked) {
+                    inserir_link.style.display = 'block';
+                    statusCtn.style.display = 'none';
+                } else {
+                    statusCtn.style.display = 'none';
+                    moduloCtn.style.display = 'block';
+                }
+            }
+
+            function inserir() {
+                var elementoOriginal = document.querySelector("#teste");
+                var elementoClone = elementoOriginal.cloneNode(true);
+                var elementoA = document.getElementById('titulo_modifica');
+                // inserindo o elemento na paǵina
+
+                if(operacao === 0) {
+                    escrever.appendChild(elementoClone);
+                    operacao = 0;
+                } else {
+                    operacao = operacao+1;
+                }
+
+                moduloCtn.style.display = 'none';
+                opcoes.style.display = 'none';
+                conferir.style.display = 'none';
+            }
+        
+        </script>
+
+    </section>
+
+</body>
+</html>

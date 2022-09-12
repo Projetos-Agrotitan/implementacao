@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edição | RoadMap</title>
+</head>
+<body>
+    
+    <section id="edicao">
+
+        <div class="container tabela-produtos">
+            <div class="row row-cols-4 produto">
+                <div class="col table-descricao-des table-descricao">
+                    <h4 id="titulo" class="titulo"></h4>
+                    <p id="descricao" class="descricao"></p>
+                    <div id='link' class="link">
+
+                    </div>
+                </div>
+                <div class="col table-descricao-des table-status status" id="status">
+                    
+                </div>
+                <div class="col table-descricao-des table-prazo prazo">
+                    <p id="prazo" class="prazo"></p>
+                </div>
+                <div  class="col table-descricao-des table-produtos modulo" id="modulos">
+                   
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+
+        var container_insert = document.getElementById('edicao');
+        var titulo_insert = document.getElementById('titulo');
+        var descricao_insert = document.getElementById('descricao');
+        var link_insert = document.getElementById('link');
+        var status_insert = document.getElementById('status');
+        var prazo_insert = document.getElementById('prazo');
+        var modulos_insert = document.getElementById('modulos');
+
+        function test() {
+            alert("Olá!");
+            status_insert.innerHTML = '';
+        }
+
+
+    </script>
+
+
+<button onclick="test()">Clique-me!</button>
+
+</body>
+</html>
+
+<a href="https://nimitz.atlassian.net/wiki/spaces/TS/pages/2798583858/Road+Map#:~:text=da%20nota%20fiscal.-,AG%2D3375,.,-AG%2D1725">
+    Saber Mais</a> <i class="bi bi-arrow-right"></i>
+
+    <p class="finalizada">Lançada</p>
+
+    <p class="alinhar-modulo"><i class="bi bi-currency-exchange"></i> | Fiscal</p>
